@@ -1064,6 +1064,13 @@ body {
     color: var(--color-purple-dark);
 }
 
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
 .vault-content {
     background: rgba(255, 255, 255, 0.95);
     border-radius: var(--border-radius);
@@ -1801,5 +1808,12 @@ body {
     .vault-content-wrapper {
         grid-template-columns: 1fr 3fr;
         gap: 1rem;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin: 1rem 0;
     }
 }

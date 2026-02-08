@@ -887,7 +887,7 @@ class ValentineGame {
     generateGalleryContent() {
         return `
             <h3>Our Gallery</h3>
-            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 1rem 0;">
+            <div class="gallery-grid">
                 <div style="background: var(--gradient-pink); height: 120px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: white;">💕</div>
                 <div style="background: var(--gradient-dreamy); height: 120px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: white;">🌟</div>
                 <div style="background: var(--color-purple); height: 120px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: white;">✨</div>
