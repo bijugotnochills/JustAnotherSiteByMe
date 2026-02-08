@@ -50,6 +50,9 @@ class ValentineGame {
         // Initialize audio
         this.initAudio();
 
+        // Load character images
+        this.loadCharacterImages();
+
         // Start loading sequence
         this.startLoadingSequence();
     }
@@ -64,6 +67,42 @@ class ValentineGame {
             // Use fallback data
             this.gameData = this.getFallbackData();
         }
+    }
+
+    loadCharacterImages() {
+        const character1Img = document.getElementById('character1-img');
+        const character2Img = document.getElementById('character2-img');
+        const character1Container = character1Img.parentElement;
+        const character2Container = character2Img.parentElement;
+        
+        // Add timestamp to prevent caching issues
+        const timestamp = new Date().getTime();
+        character1Img.src = `assets/images/characters/character1.png?t=${timestamp}`;
+        character2Img.src = `assets/images/characters/character2.png?t=${timestamp}`;
+        
+        // Handle image load success
+        character1Img.onload = () => {
+            character1Container.classList.add('loaded');
+            console.log('Character 1 image loaded successfully');
+        };
+        
+        character2Img.onload = () => {
+            character2Container.classList.add('loaded');
+            console.log('Character 2 image loaded successfully');
+        };
+        
+        // Handle image load errors (fallback to placeholder)
+        character1Img.onerror = () => {
+            character1Container.style.display = 'none';
+            character1Img.style.display = 'none';
+            console.log('Character 1 image failed to load, using placeholder');
+        };
+        
+        character2Img.onerror = () => {
+            character2Container.style.display = 'none';
+            character2Img.style.display = 'none';
+            console.log('Character 2 image failed to load, using placeholder');
+        };
     }
 
     initEventListeners() {
@@ -887,7 +926,7 @@ class ValentineGame {
     generateGalleryContent() {
         return `
             <h3>Our Gallery</h3>
-            <div class="gallery-grid">
+            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 1rem 0;">
                 <div style="background: var(--gradient-pink); height: 120px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: white;">💕</div>
                 <div style="background: var(--gradient-dreamy); height: 120px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: white;">🌟</div>
                 <div style="background: var(--color-purple); height: 120px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: white;">✨</div>

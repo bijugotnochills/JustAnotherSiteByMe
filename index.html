@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hearts.exe - A Playful Valentine Story</title>
-    <link rel="stylesheet" href="css/style.css?260208_02">
+    <link rel="stylesheet" href="css/style.css?260208_03">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,8 +23,13 @@
         <section id="loading-screen" class="game-scene active">
             <div class="scene-background">
                 <div class="floating-characters">
+                    <!-- Character 1 with dynamic image -->
                     <div class="character left-character">
-                        <div class="character-placeholder">
+                        <div class="character-image-container">
+                            <img src="assets/images/characters/character1.png" alt="Character 1" 
+                                 class="character-image" id="character1-img">
+                        </div>
+                        <div class="character-placeholder" id="character1-placeholder">
                             <div class="character-hair"></div>
                             <div class="character-face">
                                 <div class="character-eye left-eye"></div>
@@ -34,8 +39,14 @@
                             <div class="character-dress"></div>
                         </div>
                     </div>
+                    
+                    <!-- Character 2 with dynamic image -->
                     <div class="character right-character">
-                        <div class="character-placeholder">
+                        <div class="character-image-container">
+                            <img src="assets/images/characters/character2.png" alt="Character 2" 
+                                 class="character-image" id="character2-img">
+                        </div>
+                        <div class="character-placeholder" id="character2-placeholder">
                             <div class="character-hair style2"></div>
                             <div class="character-face">
                                 <div class="character-eye left-eye"></div>
@@ -301,11 +312,11 @@
 
     <!-- Background Music -->
     <audio id="background-music" loop>
-        <source src="assets/bgm/mymusic1.mp3?260208_02" type="audio/mpeg">
+        <source src="assets/bgm/mymusic1.mp3?260208_03" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
-    <script src="js/main.js?260208_02"></script>
+    <script src="js/main.js?260208_03"></script>
 </body>
 
 </html>

@@ -5,6 +5,19 @@
     "version": "1.0.0",
     "author": "Secret Admirer"
   },
+
+    "characters": {
+    "left": {
+      "imagePath": "assets/images/characters/character1.png",
+      "altText": "Character 1",
+      "fallback": "css-placeholder"
+    },
+    "right": {
+      "imagePath": "assets/images/characters/character2.png",
+      "altText": "Character 2",
+      "fallback": "css-placeholder"
+    }
+  },
   
   "loading": {
     "duration": 20000,
