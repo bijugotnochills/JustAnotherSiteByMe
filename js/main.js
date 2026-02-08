@@ -737,7 +737,7 @@ class ValentineGame {
                 animation: pulse 0.5s 3;
             ">
                 <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">💀 SYSTEM OVERRIDE 💀</h3>
-                <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">
+                <p style="font-size: 0.8rem; margin-bottom: 1.5rem;">
                     AHAHAHAHA! You thought you could say NO?<br>
                     Well now you don't have a choice!
                 </p>
@@ -767,7 +767,7 @@ class ValentineGame {
         // Change YES button text
         setTimeout(() => {
             yesButton.innerHTML = `
-                <span>YOU HAVE NO CHOICE!</span>
+                <span>YOU HAVE NO CHOICE! Just Say Yes</span>
                 <i class="fas fa-heart-crack"></i>
             `;
             yesButton.style.background = 'linear-gradient(135deg, #ff6b6b, #ff8e8e)';
