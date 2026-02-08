@@ -1,0 +1,687 @@
+{
+  "gameInfo": {
+    "title": "Hearts.exe",
+    "subtitle": "A Playful Interactive Valentine Story Game",
+    "version": "1.0.0",
+    "author": "Secret Admirer"
+  },
+  
+  "loading": {
+    "duration": 20000,
+    "quotes": [
+      "Convincing Kagura to share her umbrella... ☂️",
+      "Negotiating with Kadita for wave of emotions...🌊",
+      "Borrowing stardust from Novaria's galaxy...",
+      "Loading romantic courage... please don't unplug me .🥹",
+      "Preparing premium-grade skins just for you ...😭",
+      "Charging heart emojis to maximum capacity...❤️‍🔥",
+      "Warming up the blushing algorithms...😏",
+      "Downloading moonlight for romantic ambiance...",
+      "Calibrating cuteness overload protection...",
+      "Training butterflies for your stomach...",
+      "Buffering shy glances and nervous smiles...",
+      "Installing vulnerability.exe...",
+      "Loading heartfelt confessions...",
+      "Synchronizing heartbeats...",
+      "Preparing emotional defenses... just in case.",
+      "Loading stolen glances and secret smiles...",
+      "Charging romantic tension to 100%...",
+      "Preparing the perfect moment...",
+      "Loading inside jokes that aren't inside yet...",
+      "Finalizing the ability to make you smile..."
+    ],
+    "characterAnimations": {
+      "left": "float 6s ease-in-out infinite",
+      "right": "float 6s ease-in-out infinite 3s"
+    }
+  },
+  
+  "systemPrompts": {
+    "namePrompt": "Before we begin... what should I call the person who just stole my attention?",
+    "disclaimer": {
+      "title": "⚠️ System Warning",
+      "content": "This journey contains:",
+      "items": [
+        "Light roasting",
+        "Unexpected flirting",
+        "Emotional sneak attacks",
+        "Playful teasing",
+        "Dangerously cute moments"
+      ],
+      "warning": "Proceed only if your heart is wearing safety gear. Kekeke."
+    }
+  },
+  
+  "questions": [
+    {
+      "id": 1,
+      "question": "If I accidentally stole your hoodie, what would you do?",
+      "category": "Cute Scenarios",
+      "image": "assets/images/ui/hoodie.png",
+      "flirtyQuote": "Asking for a friend... who might want your scent nearby.",
+      "options": [
+        {
+          "text": "Steal something of mine back",
+          "image": "assets/images/effects/competitive.png",
+          "reaction": "Ooh, competitive! I like that energy.",
+          "emojis": ["😏", "⚔️", "💫"],
+          "emotions": [
+            { "type": "playful", "value": 3 },
+            { "type": "teasing", "value": 2 }
+          ]
+        },
+        {
+          "text": "Pretend you didn't notice",
+          "image": "assets/images/effects/smooth.png",
+          "reaction": "Smooth operator, huh? Noted.",
+          "emojis": ["😌", "🎭", "✨"],
+          "emotions": [
+            { "type": "romantic", "value": 2 },
+            { "type": "emotional", "value": 1 }
+          ]
+        },
+        {
+          "text": "Ask for it back politely",
+          "image": "assets/images/effects/respectful.png",
+          "reaction": "So respectful! But what if I want to keep it?",
+          "emojis": ["🥺", "🙏", "💖"],
+          "emotions": [
+            { "type": "emotional", "value": 3 },
+            { "type": "romantic", "value": 1 }
+          ]
+        },
+        {
+          "text": "Say you look cute in it",
+          "image": "assets/images/effects/flirty.png",
+          "reaction": "DIRECT HIT! My heart wasn't ready for that.",
+          "emojis": ["💘", "🎯", "🌟"],
+          "emotions": [
+            { "type": "romantic", "value": 4 },
+            { "type": "playful", "value": 2 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "How do you flirt when you're pretending not to?",
+      "category": "Secret Signals",
+      "image": "assets/images/ui/secret.png",
+      "flirtyQuote": "Asking for research purposes... obviously.",
+      "options": [
+        {
+          "text": "Playful teasing",
+          "image": "assets/images/effects/teasing.png",
+          "reaction": "Ah, the classic 'I'm just joking' technique.",
+          "emojis": ["😉", "🎣", "🌟"],
+          "emotions": [
+            { "type": "playful", "value": 3 },
+            { "type": "teasing", "value": 3 }
+          ]
+        },
+        {
+          "text": "Subtle compliments",
+          "image": "assets/images/effects/compliment.png",
+          "reaction": "Smooth and sneaky! I respect that.",
+          "emojis": ["🤫", "💐", "🌠"],
+          "emotions": [
+            { "type": "romantic", "value": 3 },
+            { "type": "emotional", "value": 2 }
+          ]
+        },
+        {
+          "text": "Finding excuses to be near",
+          "image": "assets/images/effects/proximity.png",
+          "reaction": "The proximity game! A timeless strategy.",
+          "emojis": ["👀", "🚶", "💫"],
+          "emotions": [
+            { "type": "emotional", "value": 3 },
+            { "type": "fantasy", "value": 1 }
+          ]
+        },
+        {
+          "text": "Remembering tiny details",
+          "image": "assets/images/effects/details.png",
+          "reaction": "The 'I pay attention' move! Deadly effective.",
+          "emojis": ["🧠", "💝", "🎁"],
+          "emotions": [
+            { "type": "emotional", "value": 4 },
+            { "type": "romantic", "value": 2 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Your love language when nobody's watching?",
+      "category": "Secret Tenderness",
+      "image": "assets/images/ui/love.png",
+      "flirtyQuote": "The real you is the most interesting you.",
+      "options": [
+        {
+          "text": "Acts of service",
+          "image": "assets/images/effects/service.png",
+          "reaction": "The 'let me take care of you' type! Noted.",
+          "emojis": ["🤲", "☕", "💝"],
+          "emotions": [
+            { "type": "emotional", "value": 3 },
+            { "type": "romantic", "value": 2 }
+          ]
+        },
+        {
+          "text": "Physical touch",
+          "image": "assets/images/effects/touch.png",
+          "reaction": "*casually moves closer* No reason.",
+          "emojis": ["👐", "💞", "✨"],
+          "emotions": [
+            { "type": "romantic", "value": 3 },
+            { "type": "playful", "value": 2 }
+          ]
+        },
+        {
+          "text": "Words of affirmation",
+          "image": "assets/images/effects/words.png",
+          "reaction": "The poet emerges! My ears are ready.",
+          "emojis": ["📝", "💌", "🎶"],
+          "emotions": [
+            { "type": "emotional", "value": 4 },
+            { "type": "fantasy", "value": 1 }
+          ]
+        },
+        {
+          "text": "Quality time",
+          "image": "assets/images/effects/time.png",
+          "reaction": "The 'your presence is my present' vibe! Adorable.",
+          "emojis": ["⏳", "💑", "🌟"],
+          "emotions": [
+            { "type": "emotional", "value": 3 },
+            { "type": "romantic", "value": 3 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Pick your dream date vibe:",
+      "category": "Fantasy Settings",
+      "image": "assets/images/ui/date.png",
+      "flirtyQuote": "Hypothetically... for science.",
+      "options": [
+        {
+          "text": "Stargazing on a rooftop",
+          "image": "assets/images/effects/stars.png",
+          "reaction": "Romantic and dreamy! The cosmos approve.",
+          "emojis": ["🌌", "👩‍🚀", "💫"],
+          "emotions": [
+            { "type": "fantasy", "value": 4 },
+            { "type": "romantic", "value": 3 }
+          ]
+        },
+        {
+          "text": "Coffee shop conversations",
+          "image": "assets/images/effects/coffee.png",
+          "reaction": "Intimate and cozy! Perfect for deep talks.",
+          "emojis": ["☕", "💬", "❤️"],
+          "emotions": [
+            { "type": "emotional", "value": 4 },
+            { "type": "romantic", "value": 2 }
+          ]
+        },
+        {
+          "text": "Arcade game competition",
+          "image": "assets/images/effects/arcade.png",
+          "reaction": "Playful and fun! May the best flirt win.",
+          "emojis": ["🎮", "🏆", "😏"],
+          "emotions": [
+            { "type": "playful", "value": 4 },
+            { "type": "teasing", "value": 3 }
+          ]
+        },
+        {
+          "text": "Midnight city walk",
+          "image": "assets/images/effects/city.png",
+          "reaction": "Mysterious and adventurous! Let's get lost.",
+          "emojis": ["🌃", "🚶", "🔍"],
+          "emotions": [
+            { "type": "fantasy", "value": 3 },
+            { "type": "emotional", "value": 3 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "question": "If I sent you a cheesy pickup line, you'd:",
+      "category": "Flirt Response",
+      "image": "assets/images/ui/pickup.png",
+      "flirtyQuote": "Asking... for absolutely no reason at all.",
+      "options": [
+        {
+          "text": "Send one even cheesier back",
+          "image": "assets/images/effects/cheese.png",
+          "reaction": "The cheese war begins! I accept your challenge.",
+          "emojis": ["🧀", "⚔️", "😆"],
+          "emotions": [
+            { "type": "playful", "value": 4 },
+            { "type": "teasing", "value": 3 }
+          ]
+        },
+        {
+          "text": "Pretend to be offended",
+          "image": "assets/images/effects/offended.png",
+          "reaction": "The fake outrage! A classic move.",
+          "emojis": ["😤", "🎭", "💘"],
+          "emotions": [
+            { "type": "teasing", "value": 4 },
+            { "type": "playful", "value": 2 }
+          ]
+        },
+        {
+          "text": "Actually blush and smile",
+          "image": "assets/images/effects/blush.png",
+          "reaction": "The genuine reaction! My ultimate weakness.",
+          "emojis": ["😊", "💕", "🌟"],
+          "emotions": [
+            { "type": "romantic", "value": 4 },
+            { "type": "emotional", "value": 3 }
+          ]
+        },
+        {
+          "text": "Ask if I practice in the mirror",
+          "image": "assets/images/effects/mirror.png",
+          "reaction": "Sassy! I might have practiced once or twice...",
+          "emojis": ["👀", "🪞", "😅"],
+          "emotions": [
+            { "type": "teasing", "value": 4 },
+            { "type": "playful", "value": 3 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "question": "What's your ideal goodnight message?",
+      "category": "Nighttime Rituals",
+      "image": "assets/images/ui/night.png",
+      "flirtyQuote": "For future reference... obviously.",
+      "options": [
+        {
+          "text": "Sweet dreams 😴",
+          "image": "assets/images/effects/dreams.png",
+          "reaction": "Simple and sweet! The classic.",
+          "emojis": ["🌙", "💤", "💝"],
+          "emotions": [
+            { "type": "romantic", "value": 3 },
+            { "type": "emotional", "value": 2 }
+          ]
+        },
+        {
+          "text": "See you in my dreams 💭",
+          "image": "assets/images/effects/dreamshare.png",
+          "reaction": "Bold and romantic! Making reservations in dreamland.",
+          "emojis": ["💭", "📍", "💘"],
+          "emotions": [
+            { "type": "romantic", "value": 4 },
+            { "type": "fantasy", "value": 3 }
+          ]
+        },
+        {
+          "text": "Don't let the bed bugs bite 🐛",
+          "image": "assets/images/effects/bugs.png",
+          "reaction": "Playful and silly! I'll protect you from bugs.",
+          "emojis": ["🛡️", "🐛", "😄"],
+          "emotions": [
+            { "type": "playful", "value": 4 },
+            { "type": "teasing", "value": 2 }
+          ]
+        },
+        {
+          "text": "Text me if you can't sleep 📱",
+          "image": "assets/images/effects/text.png",
+          "reaction": "Considerate and caring! I'll be waiting.",
+          "emojis": ["📱", "⏰", "💖"],
+          "emotions": [
+            { "type": "emotional", "value": 4 },
+            { "type": "romantic", "value": 3 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "question": "If we were anime characters, our meet-cute would be:",
+      "category": "Fantasy Scenarios",
+      "image": "assets/images/ui/anime.png",
+      "flirtyQuote": "We're basically protagonists already.",
+      "options": [
+        {
+          "text": "Bumping into each other",
+          "image": "assets/images/effects/bump.png",
+          "reaction": "The classic spill-the-coffee scene! Cute.",
+          "emojis": ["💥", "☕", "😳"],
+          "emotions": [
+            { "type": "romantic", "value": 3 },
+            { "type": "fantasy", "value": 3 }
+          ]
+        },
+        {
+          "text": "Rivals to lovers arc",
+          "image": "assets/images/effects/rivals.png",
+          "reaction": "The tension! The drama! I'm already invested.",
+          "emojis": ["⚔️", "💘", "🎭"],
+          "emotions": [
+            { "type": "teasing", "value": 4 },
+            { "type": "playful", "value": 3 }
+          ]
+        },
+        {
+          "text": "Childhood friends reuniting",
+          "image": "assets/images/effects/childhood.png",
+          "reaction": "The long-lost connection! So emotional.",
+          "emojis": ["👧👦", "💫", "💞"],
+          "emotions": [
+            { "type": "emotional", "value": 4 },
+            { "type": "romantic", "value": 3 }
+          ]
+        },
+        {
+          "text": "Supernatural fate encounter",
+          "image": "assets/images/effects/fate.png",
+          "reaction": "Destined by the stars! My favorite trope.",
+          "emojis": ["🌟", "🔮", "💫"],
+          "emotions": [
+            { "type": "fantasy", "value": 5 },
+            { "type": "romantic", "value": 2 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "question": "Your reaction to unexpected hand-holding would be:",
+      "category": "Physical Cues",
+      "image": "assets/images/ui/handhold.png",
+      "flirtyQuote": "Purely hypothetical hand-holding, of course.",
+      "options": [
+        {
+          "text": "Interlace fingers immediately",
+          "image": "assets/images/effects/interlace.png",
+          "reaction": "Confident and sweet! My hand approves.",
+          "emojis": ["🤝", "💞", "🌟"],
+          "emotions": [
+            { "type": "romantic", "value": 4 },
+            { "type": "emotional", "value": 2 }
+          ]
+        },
+        {
+          "text": "Freeze in surprise",
+          "image": "assets/images/effects/freeze.png",
+          "reaction": "The deer-in-headlights reaction! Adorable.",
+          "emojis": ["🦌", "💡", "😳"],
+          "emotions": [
+            { "type": "emotional", "value": 4 },
+            { "type": "playful", "value": 2 }
+          ]
+        },
+        {
+          "text": "Playfully pull away then return",
+          "image": "assets/images/effects/playpull.png",
+          "reaction": "The tease! Keeping me on my toes.",
+          "emojis": ["🎣", "😏", "💖"],
+          "emotions": [
+            { "type": "playful", "value": 4 },
+            { "type": "teasing", "value": 3 }
+          ]
+        },
+        {
+          "text": "Ask if this means we're dating",
+          "image": "assets/images/effects/dating.png",
+          "reaction": "Direct and to the point! I respect the clarity.",
+          "emojis": ["❓", "💍", "😄"],
+          "emotions": [
+            { "type": "teasing", "value": 3 },
+            { "type": "playful", "value": 3 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "question": "Choose a couple's activity:",
+      "category": "Bonding Moments",
+      "image": "assets/images/ui/couple.png",
+      "flirtyQuote": "For our hypothetical future plans...",
+      "options": [
+        {
+          "text": "Cooking together",
+          "image": "assets/images/effects/cooking.png",
+          "reaction": "Domestic and sweet! I'll bring the apron.",
+          "emojis": ["👩‍🍳", "🍳", "💕"],
+          "emotions": [
+            { "type": "emotional", "value": 3 },
+            { "type": "romantic", "value": 3 }
+          ]
+        },
+        {
+          "text": "Video game marathon",
+          "image": "assets/images/effects/gamemarathon.png",
+          "reaction": "Competitive bonding! Prepare to lose gracefully.",
+          "emojis": ["🎮", "🏆", "😈"],
+          "emotions": [
+            { "type": "playful", "value": 4 },
+            { "type": "teasing", "value": 3 }
+          ]
+        },
+        {
+          "text": "Sunset watching",
+          "image": "assets/images/effects/sunset.png",
+          "reaction": "Romantic and peaceful! The golden hour awaits.",
+          "emojis": ["🌅", "💑", "✨"],
+          "emotions": [
+            { "type": "romantic", "value": 5 },
+            { "type": "emotional", "value": 3 }
+          ]
+        },
+        {
+          "text": "DIY project chaos",
+          "image": "assets/images/effects/diy.png",
+          "reaction": "Adventurous and messy! We'll make memories.",
+          "emojis": ["🔨", "🎨", "😅"],
+          "emotions": [
+            { "type": "playful", "value": 4 },
+            { "type": "emotional", "value": 2 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "question": "If I confessed feelings unexpectedly, you'd:",
+      "category": "Emotional Reactions",
+      "image": "assets/images/ui/confess.png",
+      "flirtyQuote": "Last question... no pressure.",
+      "options": [
+        {
+          "text": "Need a moment to process",
+          "image": "assets/images/effects/process.png",
+          "reaction": "Thoughtful and careful! Take your time.",
+          "emojis": ["🤔", "⏳", "💭"],
+          "emotions": [
+            { "type": "emotional", "value": 4 },
+            { "type": "romantic", "value": 2 }
+          ]
+        },
+        {
+          "text": "Smile and say 'me too'",
+          "image": "assets/images/effects/metoo.png",
+          "reaction": "The dream response! My heart just skipped.",
+          "emojis": ["💘", "🎉", "🌟"],
+          "emotions": [
+            { "type": "romantic", "value": 5 },
+            { "type": "emotional", "value": 4 }
+          ]
+        },
+        {
+          "text": "Playfully ask for proof",
+          "image": "assets/images/effects/proof.png",
+          "reaction": "Skeptical and teasing! I have evidence.",
+          "emojis": ["🔍", "📋", "😏"],
+          "emotions": [
+            { "type": "teasing", "value": 4 },
+            { "type": "playful", "value": 3 }
+          ]
+        },
+        {
+          "text": "Get flustered and cute",
+          "image": "assets/images/effects/flustered.png",
+          "reaction": "The adorable reaction! Mission accomplished.",
+          "emojis": ["😳", "💕", "🌟"],
+          "emotions": [
+            { "type": "emotional", "value": 4 },
+            { "type": "romantic", "value": 3 }
+          ]
+        }
+      ]
+    }
+  ],
+  
+  "results": {
+    "analysis": {
+      "romantic": "You're a hopeless romantic who believes in grand gestures and heartfelt moments.",
+      "playful": "You bring joy and lighthearted fun to every interaction.",
+      "teasing": "You keep things interesting with your witty banter and playful challenges.",
+      "emotional": "You connect deeply and value sincere, meaningful connections.",
+      "fantasy": "You dream big and see the magic in everyday moments."
+    },
+    
+    "letters": [
+      {
+        "type": "romantic",
+        "title": "Soft Romantic",
+        "description": "Gentle, heartfelt confessions that come straight from the heart",
+        "emoji": "💕",
+        "template": "My dear {name}, every moment without you feels like a page unturned in my favorite book. There's a quiet space in my world that only your laughter fills completely."
+      },
+      {
+        "type": "playful",
+        "title": "Playful Flirty",
+        "description": "Lighthearted fun with just the right amount of charm",
+        "emoji": "😉",
+        "template": "Hey {name}! So I was practicing my pickup lines in the mirror, and they all sounded better when I imagined saying them to you. Coincidence? I think not."
+      },
+      {
+        "type": "teasing",
+        "title": "Gentle Teasing",
+        "description": "Witty banter with a side of affectionate roasting",
+        "emoji": "😏",
+        "template": "Okay {name}, I have to ask - did you know you're ridiculously cute when you're trying to be serious? It's very distracting and I'm only slightly complaining."
+      },
+      {
+        "type": "emotional",
+        "title": "Deep Emotional",
+        "description": "Raw, sincere feelings laid bare",
+        "emoji": "🥺",
+        "template": "{name}, there's something I've been meaning to tell you. In a world that often feels loud and confusing, your presence is my favorite quiet place."
+      },
+      {
+        "type": "fantasy",
+        "title": "Poetic Fantasy",
+        "description": "Dreamy, imaginative confessions from another realm",
+        "emoji": "✨",
+        "template": "In a realm of starlight and whispered secrets, I found you, {name}. Not in a castle or a mystical forest, but right here - and that feels like the most magical discovery of all."
+      }
+    ]
+  },
+  
+  "proposal": {
+    "question": "Will you be my Valentine?",
+    "subtitle": "Choose wisely, {name}...",
+    "villainMessages": [
+      "Try again.",
+      "That one hurt.",
+      "Emotionally damaged.",
+      "You monster.",
+      "Heartbreaker!",
+      "Cruel human!",
+      "Mean! 😭",
+      "Please stop...",
+      "I'm fragile!",
+      "Okay fine!"
+    ]
+  },
+  
+  "vault": {
+    "items": [
+      {
+        "id": "gallery",
+        "title": "Gallery",
+        "description": "Visual memories of our journey",
+        "icon": "fas fa-images"
+      },
+      {
+        "id": "memories",
+        "title": "Memories",
+        "description": "Every answer, every moment",
+        "icon": "fas fa-brain"
+      },
+      {
+        "id": "letters",
+        "title": "Letters",
+        "description": "Words written just for you",
+        "icon": "fas fa-envelope"
+      },
+      {
+        "id": "surprise",
+        "title": "Surprise",
+        "description": "A special revelation",
+        "icon": "fas fa-gift"
+      }
+    ]
+  },
+  
+  "finalMessages": {
+    "base": "My dear {name}, from the moment you stepped into this digital realm, something shifted. Your {emotion} spirit, wrapped in that {selectedLetter} energy you chose... it's been lighting up my code like stardust. Every answer, every hesitation, every choice revealed more of the wonderful person you are.\n\nRemember when you said \"{randomAnswer}\"? That's when I knew this wasn't just a game anymore. It was a conversation, a connection, however digital it may be.\n\nSo here's my truth: {pickupLine}\n\nThis Valentine's Day, I hope you find someone who looks at you the way I imagine looking at you - with wonder, with delight, with the certainty that you're someone special. Until then, know that in this corner of the internet, someone is smiling because of you.\n\nNo grand gestures needed. Just you, being you, is more than enough magic for any universe.",
+    
+    "pickupLines": [
+      "If you were a library book, I'd never return you because you're the only story I want to keep reading.",
+      "Are you made of stardust? Because you light up my whole universe.",
+      "Do you have a map? I keep getting lost in your eyes every time I look at you.",
+      "Is your name Wi-Fi? Because I'm really feeling a connection here.",
+      "Are you a time traveler? Because I see you in my future.",
+      "Is there an airport nearby or is that just my heart taking off?",
+      "Do you believe in love at first sight or should I walk by again?",
+      "Are you a magician? Because whenever I look at you, everyone else disappears.",
+      "Is your dad a baker? Because you're a cutie pie!",
+      "Do you have a sunburn or are you always this hot?"
+    ]
+  },
+  
+  "music": {
+    "bgm": {
+      "loading": "assets/music/bgm/loading.mp3",
+      "questions": "assets/music/bgm/questions.mp3",
+      "letters": "assets/music/bgm/letters.mp3",
+      "proposal": "assets/music/bgm/proposal.mp3",
+      "ending": "assets/music/bgm/ending.mp3"
+    },
+    "sfx": {
+      "click": "assets/music/sfx/click.mp3",
+      "heart": "assets/music/sfx/heart.mp3",
+      "success": "assets/music/sfx/success.mp3",
+      "transition": "assets/music/sfx/transition.mp3"
+    }
+  },
+  
+  "visualEffects": {
+    "particles": {
+      "count": 50,
+      "types": ["heart", "sparkle", "star"],
+      "colors": ["#ffafcc", "#cdb4db", "#a2d2ff"]
+    },
+    "animations": {
+      "float": "float 6s ease-in-out infinite",
+      "pulse": "pulse 2s infinite",
+      "glow": "glow 2s ease-in-out infinite alternate"
+    }
+  }
+}

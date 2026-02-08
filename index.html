@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hearts.exe - A Playful Valentine Story</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
+</head>
+
+<body>
+    <!-- Main Game Container -->
+    <div id="game-container">
+        <!-- Loading Screen -->
+        <section id="loading-screen" class="game-scene active">
+            <div class="scene-background">
+                <div class="floating-characters">
+                    <div class="character left-character">
+                        <div class="character-placeholder">
+                            <div class="character-hair"></div>
+                            <div class="character-face">
+                                <div class="character-eye left-eye"></div>
+                                <div class="character-eye right-eye"></div>
+                                <div class="character-mouth"></div>
+                            </div>
+                            <div class="character-dress"></div>
+                        </div>
+                    </div>
+                    <div class="character right-character">
+                        <div class="character-placeholder">
+                            <div class="character-hair style2"></div>
+                            <div class="character-face">
+                                <div class="character-eye left-eye"></div>
+                                <div class="character-eye right-eye"></div>
+                                <div class="character-mouth smile"></div>
+                            </div>
+                            <div class="character-dress style2"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="loading-content">
+                    <div class="loading-header">
+                        <h1 class="game-title">Hearts.exe</h1>
+                        <p class="game-subtitle">Initializing romantic protocols...</p>
+                    </div>
+
+                    <div class="loading-progress">
+                        <div class="heart-progress-container">
+                            <div class="heart-progress-bar">
+                                <div class="heart-progress-fill" id="progress-fill"></div>
+                            </div>
+                            <div class="heart-progress-text">
+                                Loading... <span id="progress-percent">0</span>%
+                            </div>
+                        </div>
+
+                        <div class="loading-quote-container">
+                            <p id="loading-quote" class="loading-quote">Loading romantic protocols...</p>
+                        </div>
+
+                        <!-- Skip Button -->
+                        <button id="skip-loading" class="skip-button" style="display: none;">
+                            <i class="fas fa-forward"></i>
+                            <span>Skip Loading</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="particles-container" id="particles-container"></div>
+            </div>
+        </section>
+
+        <!-- Name Input Screen -->
+        <section id="name-screen" class="game-scene">
+            <div class="scene-background">
+                <div class="scene-content">
+                    <div class="name-container">
+                        <div class="name-header">
+                            <h2><i class="fas fa-heart"></i> Before we begin...</h2>
+                            <p class="name-prompt">What should I call the person who just stole my attention?</p>
+                        </div>
+
+                        <div class="name-input-container">
+                            <input type="text" id="user-name" placeholder="Type your name here..." maxlength="20"
+                                autocomplete="off">
+                            <div class="input-hearts">
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <button id="submit-name" class="btn-glow">
+                                <span>Continue</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Disclaimer Screen -->
+        <section id="disclaimer-screen" class="game-scene">
+            <div class="scene-background">
+                <div class="scene-content">
+                    <div class="disclaimer-container">
+                        <div class="warning-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h2>⚠️ System Warning</h2>
+                        <div class="disclaimer-text">
+                            <p>This journey contains:</p>
+                            <ul>
+                                <li><i class="fas fa-fire"></i> Light roasting</li>
+                                <li><i class="fas fa-kiss-wink-heart"></i> Unexpected flirting</li>
+                                <li><i class="fas fa-mask"></i> Emotional sneak attacks</li>
+                                <li><i class="fas fa-grin-tongue-wink"></i> Playful teasing</li>
+                                <li><i class="fas fa-heart-broken"></i> Dangerously cute moments</li>
+                            </ul>
+                            <p class="final-warning">Proceed only if your heart is wearing safety gear. Kekeke.</p>
+                        </div>
+                        <button id="accept-disclaimer" class="btn-pulse">
+                            <span>I Accept the Risks</span>
+                            <i class="fas fa-heart-circle-check"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Questions Screen -->
+        <section id="questions-screen" class="game-scene">
+            <div class="scene-background">
+                <div class="scene-content">
+                    <div class="questions-container">
+                        <div class="questions-header">
+                            <div class="question-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="question-progress"></div>
+                                </div>
+                                <span class="question-count">
+                                    <span id="current-question">1</span>/<span id="total-questions">10</span>
+                                </span>
+                            </div>
+                            <h2 id="question-category">Personality Discovery</h2>
+                        </div>
+
+                        <div class="question-content">
+                            <div class="question-card">
+                                <h3 id="main-question"></h3>
+                                <div class="question-image-container">
+                                    <div class="question-image-placeholder" id="question-image"></div>
+                                </div>
+
+                                <div class="options-container" id="options-container">
+                                    <!-- Options will be dynamically inserted here -->
+                                </div>
+
+                                <div class="question-actions">
+                                    <button id="next-question" class="btn-next" disabled>
+                                        <span>Next Question</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </div>
+
+                                <div class="reaction-container">
+                                    <p id="option-reaction" class="reaction-text"></p>
+                                    <div class="emoji-reactions" id="emoji-reactions"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-footer">
+                            <p id="flirty-quote" class="flirty-quote"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Screen -->
+        <section id="results-screen" class="game-scene">
+            <div class="scene-background">
+                <div class="scene-content">
+                    <div class="results-container">
+                        <div class="results-header">
+                            <h2><i class="fas fa-envelope-open-text"></i> Your Love Letters</h2>
+                            <p class="results-subtitle">Generated just for you, <span id="user-name-display"></span> ✨
+                            </p>
+                        </div>
+
+                        <div class="letters-container" id="letters-container">
+                            <!-- Letters will be dynamically inserted here -->
+                        </div>
+
+                        <div class="letter-instruction">
+                            <p><i class="fas fa-hand-point-up"></i> Choose one that speaks to your heart</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proposal Screen -->
+        <section id="proposal-screen" class="game-scene">
+            <div class="scene-background">
+                <div class="scene-content">
+                    <div class="proposal-container">
+                        <div class="proposal-question">
+                            <h2>Will you be my Valentine?</h2>
+                            <p class="proposal-subtitle">Choose wisely, <span id="proposal-name"></span>...</p>
+                        </div>
+
+                        <div class="proposal-buttons">
+                            <button id="yes-button" class="btn-heartbeat">
+                                <span>YES</span>
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button id="no-button" class="btn-villain">
+                                <span>NO</span>
+                                <i class="fas fa-skull-crossbones"></i>
+                            </button>
+                        </div>
+
+                        <div class="proposal-effects" id="proposal-effects"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Memory Vault Screen -->
+        <section id="vault-screen" class="game-scene">
+            <div class="scene-background">
+                <div class="scene-content">
+                    <div class="vault-container">
+                        <div class="vault-header">
+                            <h2><i class="fas fa-treasure-chest"></i> Memory Vault</h2>
+                            <p>Unlock all memories for your final reward</p>
+                            <div class="vault-progress">
+                                <span id="unlocked-count">0</span>/4 Unlocked
+                            </div>
+                        </div>
+
+                        <div class="vault-content-wrapper">
+                            <div class="vault-icons" id="vault-icons">
+                                <!-- Vault icons will be dynamically inserted here -->
+                            </div>
+
+                            <div class="vault-content" id="vault-content">
+                                <div class="vault-placeholder">
+                                    <i class="fas fa-lock"></i>
+                                    <p>Select a memory to unlock</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Scene -->
+        <section id="final-screen" class="game-scene">
+            <div class="scene-background">
+                <div class="scene-content">
+                    <div class="final-container">
+                        <div class="final-letter" id="final-letter">
+                            <!-- Final letter will be dynamically inserted here -->
+                        </div>
+
+                        <div class="final-hearts">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                        </div>
+
+                        <div class="final-actions">
+                            <button id="relive-button" class="btn-glow">
+                                <i class="fas fa-redo"></i>
+                                <span>Relive this adventure</span>
+                            </button>
+                            <button id="share-button" class="btn-pulse">
+                                <i class="fas fa-share-alt"></i>
+                                <span>Share the love</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="background-music" loop>
+        <source src="assets/bgm/mymusic1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
