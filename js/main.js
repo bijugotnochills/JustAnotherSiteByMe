@@ -313,11 +313,11 @@ class ValentineGame {
         // Create particles
         this.createParticles();
 
-        // Show skip button after 5 seconds (10 quotes)
+        // Show skip button after 8 seconds (4 quotes)
         this.skipButtonTimeout = setTimeout(() => {
             skipButton.style.display = 'flex';
             this.playSFX('heart');
-        }, 5000);
+        }, 8000);
 
         // Clear any existing interval
         if (this.loadingInterval) {
@@ -351,7 +351,7 @@ class ValentineGame {
                 clearTimeout(this.skipButtonTimeout);
                 this.completeLoading();
             }
-        }, 2000); // 2 seconds per quote
+        }, 1500); // 1.5 seconds per quote
     }
 
     completeLoading() {
@@ -979,7 +979,7 @@ class ValentineGame {
             setTimeout(() => {
                 this.playSFX('success');
                 this.showFinalScene();
-            }, 2000);
+            }, 5000);
         }
     }
 
@@ -1137,7 +1137,7 @@ class ValentineGame {
                 // Scroll to top
                 window.scrollTo(0, 0);
             }
-        }, 1500);
+        }, 1000);
     }
 
     restartGame() {
