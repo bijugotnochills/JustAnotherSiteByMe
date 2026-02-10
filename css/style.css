@@ -115,7 +115,7 @@ body {
 }
 
 .character.left-character {
-        left: -7vw;
+    left: -7vw;
     bottom: 19vh;
     animation-delay: 0s;
 }
@@ -262,6 +262,12 @@ body {
     color: var(--color-purple-dark);
     margin-bottom: 3rem;
     opacity: 0.9;
+    background-color: white;
+    display: inline;
+    border: 1px solid;
+    border-radius: 25rem;
+    border-color: #b185db;
+    padding: 1rem;
 }
 
 .heart-progress-container {
@@ -1441,7 +1447,7 @@ body {
     .name-container,
     .disclaimer-container,
     .question-card {
-        padding: 1.5rem;
+        padding: 1rem;
     }
 
     .game-title {
@@ -1471,13 +1477,14 @@ body {
     }
 
     .question-image-container {
-        width: 120px;
-        height: 120px;
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 0.25rem;
     }
 
     .option-button {
-        padding: 0.5rem;
-        font-size: 0.6rem;
+        padding: 0.25rem;
+        font-size: 0.45rem;
     }
 
     .btn-glow,
@@ -1631,6 +1638,44 @@ body {
     animation: pulse 1.5s infinite;
 }
 
+@keyframes evilPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.9;
+    }
+}
+
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translate(-2px, 2px);
+    }
+
+    40% {
+        transform: translate(-2px, -2px);
+    }
+
+    60% {
+        transform: translate(2px, 2px);
+    }
+
+    80% {
+        transform: translate(2px, -2px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
 /* Update loading quote animation */
 @keyframes fadeInOut {
     0% {
@@ -1664,7 +1709,12 @@ body {
     justify-content: center;
     animation: fadeInOut 2s ease-in-out;
     text-align: center;
-    padding: 0 1rem;
+    padding: 1rem 1rem;
+    background-color: white;
+    display: inline;
+    border: 1px solid;
+    border-radius: 25rem;
+    border-color: #ff6b6b;
 }
 
 /* Add to existing responsive design */
@@ -1786,6 +1836,34 @@ body {
     }
 }
 
+.memories-switch {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 10px;
+    border-left: 3px solid var(--color-pink);
+}
+
+.specialsurprise-icon {
+    font-size: 4rem;
+    color: gold;
+    margin: 1rem;
+}
+
+.specialsurprise-p1 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.specialsurprise-p2 {
+    margin-bottom: 1rem;
+}
+
+.specialsurprise-p3 {
+    margin-top: 1rem;
+    font-style: italic;
+}
+
 @media (max-width: 480px) {
     .vault-container {
         padding: 1rem 0rem;
@@ -1843,7 +1921,7 @@ body {
     }
 
     .vault-content-wrapper {
-        grid-template-columns: 1fr 3fr;
+        grid-template-columns: 1fr 4fr;
         gap: 1rem;
     }
 
@@ -1855,5 +1933,75 @@ body {
     .character.right-character {
         right: -18vw;
         bottom: 0vh;
+    }
+
+    .btn-next {
+        margin: 0.25rem auto 0;
+        padding: 0.25rem 0.25rem;
+        font-size: 0.8rem;
+    }
+
+    .reaction-container {
+        min-height: 20px;
+        padding: 0.25rem;
+    }
+
+    .reaction-text {
+        font-size: 0.4rem;
+    }
+
+    .gallery-grid {
+        overflow: scroll;
+        max-height: 120px;
+        grid-template-columns: 1fr !important;
+        border: 0.18rem #e0bbee solid;
+        border-radius: 4px;
+        padding: 10px;
+    }
+
+    .loading-quote {
+        padding: 0.25rem;
+        font-size: 0.7rem;
+        background-color: white;
+        display: inline;
+        border: 1px solid;
+        border-radius: 25rem;
+        border-color: #ff6b6b;
+    }
+
+    .game-subtitle {
+        padding: 0.25rem;
+    }
+
+    .vault-content h3 {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .vault-content {
+        padding: 0.75rem;
+    }
+
+    .specialsurprise-p1 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .specialsurprise-p2 {
+        margin-bottom: 1rem;
+        font-size: 0.5rem;
+    }
+
+    .specialsurprise-icon {
+        font-size: 1rem;
+        color: gold;
+        margin: 1rem;
+        display: inline;
+    }
+
+    .specialsurprise-p3 {
+        margin-top: 1rem;
+        font-style: italic;
+        font-size: 0.7rem;
     }
 }

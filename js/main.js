@@ -30,7 +30,7 @@ class ValentineGame {
         ];
         this.selectedOptionIndex = null;
         this.hasForcedYes = false;
-        
+
         // Loading variables
         this.loadingInterval = null;
         this.skipButtonTimeout = null;
@@ -74,30 +74,30 @@ class ValentineGame {
         const character2Img = document.getElementById('character2-img');
         const character1Container = character1Img.parentElement;
         const character2Container = character2Img.parentElement;
-        
+
         // Add timestamp to prevent caching issues
         const timestamp = new Date().getTime();
         character1Img.src = `assets/images/characters/character1.png?t=${timestamp}`;
         character2Img.src = `assets/images/characters/character2.png?t=${timestamp}`;
-        
+
         // Handle image load success
         character1Img.onload = () => {
             character1Container.classList.add('loaded');
             console.log('Character 1 image loaded successfully');
         };
-        
+
         character2Img.onload = () => {
             character2Container.classList.add('loaded');
             console.log('Character 2 image loaded successfully');
         };
-        
+
         // Handle image load errors (fallback to placeholder)
         character1Img.onerror = () => {
             character1Container.style.display = 'none';
             character1Img.style.display = 'none';
             console.log('Character 1 image failed to load, using placeholder');
         };
-        
+
         character2Img.onerror = () => {
             character2Container.style.display = 'none';
             character2Img.style.display = 'none';
@@ -125,6 +125,7 @@ class ValentineGame {
                 const optionIndex = parseInt(optionButton.dataset.index);
                 this.playSFX('click');
                 this.selectOption(optionIndex);
+                window.scrollTo(0, 0);
             }
         });
 
@@ -168,7 +169,7 @@ class ValentineGame {
             this.playSFX('click');
             setTimeout(() => this.shareGame(), 200);
         });
-        
+
         // Skip loading button
         document.getElementById('skip-loading').addEventListener('click', () => {
             this.skipLoading();
@@ -219,7 +220,7 @@ class ValentineGame {
                 // Different sounds for different SFX
                 let frequency = 440;
                 let typeValue = 'sine';
-                
+
                 switch (type) {
                     case 'click':
                         frequency = 800;
@@ -270,16 +271,16 @@ class ValentineGame {
                 setTimeout(() => {
                     const oscillator = this.audioContext.createOscillator();
                     const gainNode = this.audioContext.createGain();
-                    
+
                     oscillator.connect(gainNode);
                     gainNode.connect(this.audioContext.destination);
-                    
+
                     oscillator.frequency.setValueAtTime(freq, this.audioContext.currentTime);
                     oscillator.type = type;
-                    
+
                     gainNode.gain.setValueAtTime(0.05, this.audioContext.currentTime);
                     gainNode.gain.exponentialRampToValueAtTime(0.001, this.audioContext.currentTime + 0.5);
-                    
+
                     oscillator.start();
                     oscillator.stop(this.audioContext.currentTime + 0.5);
                 }, index * 50);
@@ -312,11 +313,11 @@ class ValentineGame {
         // Create particles
         this.createParticles();
 
-        // Show skip button after 20 seconds (10 quotes)
+        // Show skip button after 5 seconds (10 quotes)
         this.skipButtonTimeout = setTimeout(() => {
             skipButton.style.display = 'flex';
             this.playSFX('heart');
-        }, 20000);
+        }, 5000);
 
         // Clear any existing interval
         if (this.loadingInterval) {
@@ -368,7 +369,7 @@ class ValentineGame {
             document.getElementById('progress-fill').style.width = '100%';
             document.getElementById('progress-percent').textContent = '100';
             this.playSFX('success');
-            
+
             setTimeout(() => {
                 this.switchScene('name-screen');
             }, 800);
@@ -377,40 +378,40 @@ class ValentineGame {
 
     skipLoading() {
         if (this.isLoadingSkipped) return;
-        
+
         this.playSFX('skip');
         this.isLoadingSkipped = true;
-        
+
         // Clear timeouts and intervals
         clearTimeout(this.skipButtonTimeout);
         if (this.loadingInterval) {
             clearInterval(this.loadingInterval);
         }
-        
+
         // Hide skip button
         document.getElementById('skip-loading').style.display = 'none';
-        
+
         // Show skipping animation
         const quoteElement = document.getElementById('loading-quote');
         const progressFill = document.getElementById('progress-fill');
         const progressPercent = document.getElementById('progress-percent');
-        
+
         // Update quote to show skipping
         quoteElement.style.animation = 'none';
         setTimeout(() => {
             quoteElement.textContent = "Skipping loading... Jumping straight to romance! 💘";
             quoteElement.style.animation = 'fadeInOut 1s ease-in-out';
         }, 50);
-        
+
         // Quickly animate progress to 100%
         let skipProgress = parseFloat(progressFill.style.width) || 0;
         const skipInterval = setInterval(() => {
             skipProgress += 5;
             if (skipProgress > 100) skipProgress = 100;
-            
+
             progressFill.style.width = `${skipProgress}%`;
             progressPercent.textContent = Math.round(skipProgress);
-            
+
             if (skipProgress >= 100) {
                 clearInterval(skipInterval);
                 setTimeout(() => {
@@ -567,7 +568,7 @@ class ValentineGame {
         const nextButton = document.getElementById('next-question');
         nextButton.disabled = false;
         nextButton.classList.add('enabled');
-        nextButton.innerHTML = '<span>Next Question</span><i class="fas fa-arrow-right"></i>';
+        nextButton.innerHTML = '<span>Next Question</span> <i class="fas fa-arrow-right"></i>';
         this.playSFX('accept');
     }
 
@@ -759,30 +760,87 @@ class ValentineGame {
         const prompt = document.createElement('div');
         prompt.className = 'system-prompt';
         prompt.innerHTML = `
+        <div style="
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.95);
+            color: #ff6b6b;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            text-align: center;
+            padding: 2rem;
+            box-shadow: inset 0 0 100px rgba(255, 0, 0, 0.3);
+            animation: evilPulse 0.5s 3;
+            backdrop-filter: blur(5px);
+        ">
             <div style="
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background: rgba(0, 0, 0, 0.9);
-                color: #ff6b6b;
-                padding: 2rem;
+                background: rgba(20, 0, 0, 0.9);
+                padding: 2rem 3rem;
                 border-radius: 1rem;
-                border: 3px solid #ff6b6b;
-                z-index: 10000;
-                text-align: center;
-                max-width: 80%;
-                box-shadow: 0 0 50px rgba(255, 107, 107, 0.5);
-                animation: pulse 0.5s 3;
+                border: 3px solid #ff4757;
+                box-shadow: 0 0 50px rgba(255, 71, 87, 0.5),
+                            inset 0 0 20px rgba(255, 71, 87, 0.2);
+                max-width: 90%;
+                animation: glitch 0.3s 3;
             ">
-                <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">💀 SYSTEM OVERRIDE 💀</h3>
-                <p style="font-size: 0.8rem; margin-bottom: 1.5rem;">
+                <h3 style="
+                    font-size: clamp(1.5rem, 4vw, 2.5rem);
+                    margin-bottom: 1.5rem;
+                    color: #ff6b6b;
+                    text-shadow: 0 0 10px #ff4757,
+                                 0 0 20px #ff4757;
+                    font-family: 'Courier New', monospace;
+                    letter-spacing: 2px;
+                ">
+                    💀 SYSTEM OVERRIDE INITIATED 💀
+                </h3>
+                
+                <p style="
+                    font-size: clamp(1rem, 3vw, 1.3rem);
+                    margin-bottom: 2rem;
+                    color: #ff8e8e;
+                    line-height: 1.6;
+                    max-width: 600px;
+                ">
                     AHAHAHAHA! You thought you could say NO?<br>
-                    Well now you don't have a choice!
+                    <span style="color: #ffcccc; font-weight: bold;">
+                    WELL NOW YOU DON'T HAVE A CHOICE!
+                    </span>
                 </p>
-                <div style="font-size: 2rem; margin: 1rem 0;">⚡💀⚡</div>
+                
+                <div style="
+                    font-size: 3rem;
+                    margin: 1.5rem 0;
+                    animation: float 2s infinite ease-in-out;
+                    text-shadow: 0 0 20px #ff4757;
+                ">
+                    ⚡💀⚡
+                </div>
+                
+                <div style="
+                    margin-top: 2rem;
+                    padding: 1rem;
+                    background: rgba(255, 71, 87, 0.1);
+                    border-radius: 0.5rem;
+                    border: 1px dashed #ff4757;
+                    font-size: 0.9rem;
+                    color: #ffcccc;
+                    max-width: 500px;
+                ">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span style="margin-left: 0.5rem;">
+                        User choice has been overridden. Proceeding with YES selection...
+                    </span>
+                </div>
             </div>
-        `;
+        </div>
+    `;
 
         effectsContainer.appendChild(prompt);
 
@@ -790,8 +848,8 @@ class ValentineGame {
         setTimeout(() => {
             prompt.style.opacity = '0';
             prompt.style.transition = 'opacity 0.5s';
-            setTimeout(() => prompt.remove(), 500);
-        }, 3000);
+            setTimeout(() => prompt.remove(), 5000);
+        }, 8000);
 
         // Make NO button escape
         noButton.classList.add('villain-escape');
@@ -806,10 +864,12 @@ class ValentineGame {
         // Change YES button text
         setTimeout(() => {
             yesButton.innerHTML = `
-                <span>YOU HAVE NO CHOICE! Just Say Yes</span>
-                <i class="fas fa-heart-crack"></i>
-            `;
+            <span>YOU HAVE NO CHOICE! Just Say Yes</span>
+            <i class="fas fa-heart-crack"></i>
+        `;
             yesButton.style.background = 'linear-gradient(135deg, #ff6b6b, #ff8e8e)';
+            yesButton.style.border = '2px solid #ff4757';
+            yesButton.style.textShadow = '0 0 10px rgba(255, 71, 87, 0.8)';
         }, 1000);
     }
 
@@ -932,7 +992,7 @@ class ValentineGame {
                 <div style="background: var(--color-purple); height: 120px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: white;">✨</div>
                 <div style="background: var(--color-blue); height: 120px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: white;">🎁</div>
             </div>
-            <p style="margin-top: 1rem; text-align: center;">Every moment with you is a memory worth keeping, ${this.userName}.</p>
+            <p style="margin-top: 1rem; text-align: center; font-size: 0.7rem;">Every moment with you is a memory worth keeping, ${this.userName}.</p>
         `;
     }
 
@@ -942,7 +1002,7 @@ class ValentineGame {
             <h3>Sweet Memories</h3>
             <div style="max-height: 250px; overflow-y: auto; padding-right: 0.5rem;">
                 ${memories.map((answer, i) => `
-                    <div style="background: rgba(255, 255, 255, 0.9); padding: 1rem; margin: 0.5rem 0; border-radius: 10px; border-left: 3px solid var(--color-pink);">
+                    <div class="memories-switch" style="background: rgba(255, 255, 255, 0.9);padding: 0.25rem;margin: 0.5rem 0;border-radius: 10px;border-left: 3px solid var(--color-pink);font-size: 0.5rem;">
                         <p><strong>${answer.question}</strong></p>
                         <p style="color: var(--color-pink-dark); margin-top: 0.5rem;"><i class="fas fa-heart"></i> ${answer.answer}</p>
                     </div>
@@ -985,9 +1045,9 @@ class ValentineGame {
         return `
             <h3>Special Surprise! 🎁</h3>
             <div style="text-align: center; padding: 1rem;">
-                <div style="font-size: 4rem; color: gold; margin: 1rem;">🌟</div>
-                <p style="font-size: 1.2rem; margin-bottom: 1rem;">You've unlocked the secret ending, ${this.userName}!</p>
-                <p style="margin-bottom: 1rem;">Your emotional profile reveals you're <strong>${emotionDescriptions[dominantEmotion]}</strong></p>
+                <div class="specialsurprise-icon">🌟</div>
+                <p class="specialsurprise-p1">You've unlocked the secret ending, ${this.userName}!</p>
+                <p class="specialsurprise-p2">Your emotional profile reveals you're <strong>${emotionDescriptions[dominantEmotion]}</strong></p>
                 <div style="background: rgba(255, 255, 255, 0.9); padding: 1rem; border-radius: 10px; margin: 1rem 0;">
                     <p style="margin-bottom: 0.5rem;"><strong>Your Love Score:</strong> ${Object.values(this.emotionalProfile).reduce((a, b) => a + b, 0)}/100</p>
                     <div style="display: flex; flex-direction: column; gap: 0.3rem;">
@@ -999,7 +1059,7 @@ class ValentineGame {
                         `).join('')}
                     </div>
                 </div>
-                <p style="margin-top: 1rem; font-style: italic;">This Valentine's, may you find someone who appreciates every part of you.</p>
+                <p class="specialsurprise-p3">This Valentine's, may you find someone who appreciates every part of you.</p>
             </div>
         `;
     }
@@ -1077,7 +1137,7 @@ class ValentineGame {
                 // Scroll to top
                 window.scrollTo(0, 0);
             }
-        }, 500);
+        }, 1500);
     }
 
     restartGame() {
