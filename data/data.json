@@ -75,7 +75,7 @@
       "options": [
         {
           "text": "Steal something of mine back",
-          "image": "assets/images/effects/competitive.png",
+          "image": "assets/images/ui/competitive.png",
           "reaction": "Ooh, competitive! I like that energy.",
           "emojis": ["😏", "⚔️", "💫"],
           "emotions": [
@@ -85,7 +85,7 @@
         },
         {
           "text": "Pretend you didn't notice",
-          "image": "assets/images/effects/smooth.png",
+          "image": "assets/images/ui/smooth.png",
           "reaction": "Smooth operator, huh? Noted.",
           "emojis": ["😌", "🎭", "✨"],
           "emotions": [
@@ -95,7 +95,7 @@
         },
         {
           "text": "Ask for it back politely",
-          "image": "assets/images/effects/respectful.png",
+          "image": "assets/images/ui/respectful.png",
           "reaction": "So respectful! But what if I want to keep it?",
           "emojis": ["🥺", "🙏", "💖"],
           "emotions": [
@@ -105,7 +105,7 @@
         },
         {
           "text": "Say you look cute in it",
-          "image": "assets/images/effects/flirty.png",
+          "image": "assets/images/ui/flirty.png",
           "reaction": "DIRECT HIT! My heart wasn't ready for that.",
           "emojis": ["💘", "🎯", "🌟"],
           "emotions": [
@@ -124,7 +124,7 @@
       "options": [
         {
           "text": "Playful teasing",
-          "image": "assets/images/effects/teasing.png",
+          "image": "assets/images/ui/teasing.png",
           "reaction": "Ah, the classic 'I'm just joking' technique.",
           "emojis": ["😉", "🎣", "🌟"],
           "emotions": [
@@ -134,7 +134,7 @@
         },
         {
           "text": "Subtle compliments",
-          "image": "assets/images/effects/compliment.png",
+          "image": "assets/images/ui/compliment.png",
           "reaction": "Smooth and sneaky! I respect that.",
           "emojis": ["🤫", "💐", "🌠"],
           "emotions": [
@@ -144,7 +144,7 @@
         },
         {
           "text": "Finding excuses to be near",
-          "image": "assets/images/effects/proximity.png",
+          "image": "assets/images/ui/proximity.png",
           "reaction": "The proximity game! A timeless strategy.",
           "emojis": ["👀", "🚶", "💫"],
           "emotions": [
@@ -154,7 +154,7 @@
         },
         {
           "text": "Remembering tiny details",
-          "image": "assets/images/effects/details.png",
+          "image": "assets/images/ui/details.png",
           "reaction": "The 'I pay attention' move! Deadly effective.",
           "emojis": ["🧠", "💝", "🎁"],
           "emotions": [
@@ -173,7 +173,7 @@
       "options": [
         {
           "text": "Acts of service",
-          "image": "assets/images/effects/service.png",
+          "image": "assets/images/ui/service.png",
           "reaction": "The 'let me take care of you' type! Noted.",
           "emojis": ["🤲", "☕", "💝"],
           "emotions": [
@@ -183,7 +183,7 @@
         },
         {
           "text": "Physical touch",
-          "image": "assets/images/effects/touch.png",
+          "image": "assets/images/ui/touch.png",
           "reaction": "*casually moves closer* No reason.",
           "emojis": ["👐", "💞", "✨"],
           "emotions": [
@@ -193,7 +193,7 @@
         },
         {
           "text": "Words of affirmation",
-          "image": "assets/images/effects/words.png",
+          "image": "assets/images/ui/words.png",
           "reaction": "The poet emerges! My ears are ready.",
           "emojis": ["📝", "💌", "🎶"],
           "emotions": [
@@ -203,7 +203,7 @@
         },
         {
           "text": "Quality time",
-          "image": "assets/images/effects/time.png",
+          "image": "assets/images/ui/time.png",
           "reaction": "The 'your presence is my present' vibe! Adorable.",
           "emojis": ["⏳", "💑", "🌟"],
           "emotions": [
@@ -222,7 +222,7 @@
       "options": [
         {
           "text": "Stargazing on a rooftop",
-          "image": "assets/images/effects/stars.png",
+          "image": "assets/images/ui/stars.png",
           "reaction": "Romantic and dreamy! The cosmos approve.",
           "emojis": ["🌌", "👩‍🚀", "💫"],
           "emotions": [
@@ -232,7 +232,7 @@
         },
         {
           "text": "Coffee shop conversations",
-          "image": "assets/images/effects/coffee.png",
+          "image": "assets/images/ui/coffee.png",
           "reaction": "Intimate and cozy! Perfect for deep talks.",
           "emojis": ["☕", "💬", "❤️"],
           "emotions": [
@@ -242,7 +242,7 @@
         },
         {
           "text": "Arcade game competition",
-          "image": "assets/images/effects/arcade.png",
+          "image": "assets/images/ui/arcade.png",
           "reaction": "Playful and fun! May the best flirt win.",
           "emojis": ["🎮", "🏆", "😏"],
           "emotions": [
@@ -252,7 +252,7 @@
         },
         {
           "text": "Midnight city walk",
-          "image": "assets/images/effects/city.png",
+          "image": "assets/images/ui/city.png",
           "reaction": "Mysterious and adventurous! Let's get lost.",
           "emojis": ["🌃", "🚶", "🔍"],
           "emotions": [
@@ -271,7 +271,7 @@
       "options": [
         {
           "text": "Send one even cheesier back",
-          "image": "assets/images/effects/cheese.png",
+          "image": "assets/images/ui/cheese.png",
           "reaction": "The cheese war begins! I accept your challenge.",
           "emojis": ["🧀", "⚔️", "😆"],
           "emotions": [
@@ -281,7 +281,7 @@
         },
         {
           "text": "Pretend to be offended",
-          "image": "assets/images/effects/offended.png",
+          "image": "assets/images/ui/offended.png",
           "reaction": "The fake outrage! A classic move.",
           "emojis": ["😤", "🎭", "💘"],
           "emotions": [
@@ -291,7 +291,7 @@
         },
         {
           "text": "Actually blush and smile",
-          "image": "assets/images/effects/blush.png",
+          "image": "assets/images/ui/blush.png",
           "reaction": "The genuine reaction! My ultimate weakness.",
           "emojis": ["😊", "💕", "🌟"],
           "emotions": [
@@ -301,7 +301,7 @@
         },
         {
           "text": "Ask if I practice in the mirror",
-          "image": "assets/images/effects/mirror.png",
+          "image": "assets/images/ui/mirror.png",
           "reaction": "Sassy! I might have practiced once or twice...",
           "emojis": ["👀", "🪞", "😅"],
           "emotions": [
@@ -320,7 +320,7 @@
       "options": [
         {
           "text": "Sweet dreams 😴",
-          "image": "assets/images/effects/dreams.png",
+          "image": "assets/images/ui/dreams.png",
           "reaction": "Simple and sweet! The classic.",
           "emojis": ["🌙", "💤", "💝"],
           "emotions": [
@@ -330,7 +330,7 @@
         },
         {
           "text": "See you in my dreams 💭",
-          "image": "assets/images/effects/dreamshare.png",
+          "image": "assets/images/ui/dreamshare.png",
           "reaction": "Bold and romantic! Making reservations in dreamland.",
           "emojis": ["💭", "📍", "💘"],
           "emotions": [
@@ -340,7 +340,7 @@
         },
         {
           "text": "Don't let the bed bugs bite 🐛",
-          "image": "assets/images/effects/bugs.png",
+          "image": "assets/images/ui/bugs.png",
           "reaction": "Playful and silly! I'll protect you from bugs.",
           "emojis": ["🛡️", "🐛", "😄"],
           "emotions": [
@@ -350,7 +350,7 @@
         },
         {
           "text": "Text me if you can't sleep 📱",
-          "image": "assets/images/effects/text.png",
+          "image": "assets/images/ui/text.png",
           "reaction": "Considerate and caring! I'll be waiting.",
           "emojis": ["📱", "⏰", "💖"],
           "emotions": [
@@ -369,7 +369,7 @@
       "options": [
         {
           "text": "Bumping into each other",
-          "image": "assets/images/effects/bump.png",
+          "image": "assets/images/ui/bump.png",
           "reaction": "The classic spill-the-coffee scene! Cute.",
           "emojis": ["💥", "☕", "😳"],
           "emotions": [
@@ -379,7 +379,7 @@
         },
         {
           "text": "Rivals to lovers arc",
-          "image": "assets/images/effects/rivals.png",
+          "image": "assets/images/ui/rivals.png",
           "reaction": "The tension! The drama! I'm already invested.",
           "emojis": ["⚔️", "💘", "🎭"],
           "emotions": [
@@ -389,7 +389,7 @@
         },
         {
           "text": "Childhood friends reuniting",
-          "image": "assets/images/effects/childhood.png",
+          "image": "assets/images/ui/childhood.png",
           "reaction": "The long-lost connection! So emotional.",
           "emojis": ["👧👦", "💫", "💞"],
           "emotions": [
@@ -399,7 +399,7 @@
         },
         {
           "text": "Supernatural fate encounter",
-          "image": "assets/images/effects/fate.png",
+          "image": "assets/images/ui/fate.png",
           "reaction": "Destined by the stars! My favorite trope.",
           "emojis": ["🌟", "🔮", "💫"],
           "emotions": [
@@ -418,7 +418,7 @@
       "options": [
         {
           "text": "Interlace fingers immediately",
-          "image": "assets/images/effects/interlace.png",
+          "image": "assets/images/ui/interlace.png",
           "reaction": "Confident and sweet! My hand approves.",
           "emojis": ["🤝", "💞", "🌟"],
           "emotions": [
@@ -428,7 +428,7 @@
         },
         {
           "text": "Freeze in surprise",
-          "image": "assets/images/effects/freeze.png",
+          "image": "assets/images/ui/freeze.png",
           "reaction": "The deer-in-headlights reaction! Adorable.",
           "emojis": ["🦌", "💡", "😳"],
           "emotions": [
@@ -438,7 +438,7 @@
         },
         {
           "text": "Playfully pull away then return",
-          "image": "assets/images/effects/playpull.png",
+          "image": "assets/images/ui/playpull.png",
           "reaction": "The tease! Keeping me on my toes.",
           "emojis": ["🎣", "😏", "💖"],
           "emotions": [
@@ -448,7 +448,7 @@
         },
         {
           "text": "Ask if this means we're dating",
-          "image": "assets/images/effects/dating.png",
+          "image": "assets/images/ui/dating.png",
           "reaction": "Direct and to the point! I respect the clarity.",
           "emojis": ["❓", "💍", "😄"],
           "emotions": [
@@ -467,7 +467,7 @@
       "options": [
         {
           "text": "Cooking together",
-          "image": "assets/images/effects/cooking.png",
+          "image": "assets/images/ui/cooking.png",
           "reaction": "Domestic and sweet! I'll bring the apron.",
           "emojis": ["👩‍🍳", "🍳", "💕"],
           "emotions": [
@@ -477,7 +477,7 @@
         },
         {
           "text": "Video game marathon",
-          "image": "assets/images/effects/gamemarathon.png",
+          "image": "assets/images/ui/gamemarathon.png",
           "reaction": "Competitive bonding! Prepare to lose gracefully.",
           "emojis": ["🎮", "🏆", "😈"],
           "emotions": [
@@ -487,7 +487,7 @@
         },
         {
           "text": "Sunset watching",
-          "image": "assets/images/effects/sunset.png",
+          "image": "assets/images/ui/sunset.png",
           "reaction": "Romantic and peaceful! The golden hour awaits.",
           "emojis": ["🌅", "💑", "✨"],
           "emotions": [
@@ -497,7 +497,7 @@
         },
         {
           "text": "DIY project chaos",
-          "image": "assets/images/effects/diy.png",
+          "image": "assets/images/ui/diy.png",
           "reaction": "Adventurous and messy! We'll make memories.",
           "emojis": ["🔨", "🎨", "😅"],
           "emotions": [
@@ -516,7 +516,7 @@
       "options": [
         {
           "text": "Need a moment to process",
-          "image": "assets/images/effects/process.png",
+          "image": "assets/images/ui/process.png",
           "reaction": "Thoughtful and careful! Take your time.",
           "emojis": ["🤔", "⏳", "💭"],
           "emotions": [
@@ -526,7 +526,7 @@
         },
         {
           "text": "Smile and say 'me too'",
-          "image": "assets/images/effects/metoo.png",
+          "image": "assets/images/ui/metoo.png",
           "reaction": "The dream response! My heart just skipped.",
           "emojis": ["💘", "🎉", "🌟"],
           "emotions": [
@@ -536,7 +536,7 @@
         },
         {
           "text": "Playfully ask for proof",
-          "image": "assets/images/effects/proof.png",
+          "image": "assets/images/ui/proof.png",
           "reaction": "Skeptical and teasing! I have evidence.",
           "emojis": ["🔍", "📋", "😏"],
           "emotions": [
@@ -546,7 +546,7 @@
         },
         {
           "text": "Get flustered and cute",
-          "image": "assets/images/effects/flustered.png",
+          "image": "assets/images/ui/flustered.png",
           "reaction": "The adorable reaction! Mission accomplished.",
           "emojis": ["😳", "💕", "🌟"],
           "emotions": [

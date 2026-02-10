@@ -498,9 +498,33 @@ class ValentineGame {
         // Update UI
         document.getElementById('main-question').textContent = question.question;
 
-        // Set question image placeholder
+        // Set question image - USE IMAGE FROM DATA
         const questionImage = document.getElementById('question-image');
-        questionImage.innerHTML = question.imageEmoji || '💭';
+
+        // Check if image exists in data, otherwise use emoji
+        if (question.image) {
+            // Create an image element
+            questionImage.innerHTML = '';
+            const img = document.createElement('img');
+            img.src = question.image;
+            img.alt = 'Question image';
+            img.style.width = '100%';
+            img.style.height = '100%';
+            img.style.objectFit = 'cover';
+            img.style.borderRadius = '50%';
+            questionImage.appendChild(img);
+
+            // Remove any emoji placeholder class
+            questionImage.classList.remove('question-image-placeholder');
+        } else if (question.imageEmoji) {
+            // Use emoji as fallback
+            questionImage.innerHTML = question.imageEmoji;
+            questionImage.classList.add('question-image-placeholder');
+        } else {
+            // Default fallback
+            questionImage.innerHTML = '💭';
+            questionImage.classList.add('question-image-placeholder');
+        }
 
         document.getElementById('question-category').textContent = question.category;
 
@@ -519,10 +543,29 @@ class ValentineGame {
             optionButton.className = 'option-button';
             optionButton.dataset.index = i;
 
+            // Create option content with image or emoji
+            const optionImageDiv = document.createElement('div');
+            optionImageDiv.className = 'option-image';
+
+            if (option.image) {
+                // Create an image element
+                const img = document.createElement('img');
+                img.src = option.image;
+                img.alt = 'Option image';
+                img.style.width = '100%';
+                img.style.height = '100%';
+                img.style.objectFit = 'cover';
+                img.style.borderRadius = '50%';
+                optionImageDiv.appendChild(img);
+            } else {
+                // Use emoji as fallback
+                optionImageDiv.textContent = option.emoji || '💖';
+            }
+
             optionButton.innerHTML = `
-                <div class="option-image">${option.emoji || '💖'}</div>
-                <span>${option.text}</span>
-            `;
+            ${optionImageDiv.outerHTML}
+            <span>${option.text}</span>
+        `;
 
             optionsContainer.appendChild(optionButton);
         });
